@@ -1,0 +1,1101 @@
+/* -------------------- */
+/* ----- COLORS ------- */
+/* -------------------- */
+/* Background - #131313 */
+/*  Orange - #F39C12    */
+/* Sun Flower - #F1C40F */
+/*  Pumpkin - #D35400   */
+/*  Carrot - #E67E22    */
+/* -------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Sora', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background: #131313;
+}
+
+/* Navigation Menu Start */
+
+.navbar {
+    position: sticky;
+    background: rgba(19, 19, 19, .9);
+    backdrop-filter: blur( 14.0px );
+    -webkit-backdrop-filter: blur( 14.0px );
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    top: 0;
+    z-index: 99999;
+    letter-spacing: 1.4px;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 9999999999;
+    width: 80%;
+}
+
+#navbar__logo {
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    /* cursor: pointer; */
+    text-decoration: none;
+    font-size: 2.3rem;
+    font-family: 'Sora';
+    font-weight: 100;
+    letter-spacing: 5px;
+    user-select: none;
+    padding-left:25px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.highlight {
+    border-bottom: 10px solid red;
+}
+
+.navbar__links {
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+    text-decoration: none;
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.navbar__links:hover {
+    color: orangered;
+    transform: translateY(-1.2px);
+    transition: all .3s ease;
+}
+
+.navbar__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 12px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #f5f5f5;
+    outline: none;
+    border-radius: 5px;
+    color: #f5f5f5;
+    white-space: nowrap;
+    transition: all .3s ease;
+}
+
+.button:hover {
+    color: orangered;
+    border: 1px solid orangered;
+    transform: translateY(-1.2px);
+    transition: all .3s ease;
+}
+
+/* iPad Pro */
+@media screen and (max-width: 1024px) {
+
+    .navbar__container {
+        width: 1024px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        z-index: 999;
+        width: 960px;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all .8s ease;
+        z-index: 9999999999999999999999;
+    }
+
+    .navbar__menu.active {
+        top: 90px;
+        transition: all .8s ease;
+        z-index: 9999999999999999999999;
+        height: 100vh;
+        font-size: 1.7rem;
+        background: rgba(19, 19, 19);
+        padding-top: 100px;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+        font-size: 1.8rem;
+    }
+
+    .navbar__toggle .bar {
+        width: 27px;
+        height: 1.2px;
+        margin: 7px auto;
+        transition: all .3s ease-in-out;
+        background: #fff;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        z-index: 10000000;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 1.8rem;
+        width: 100%;
+        display: table;
+        margin-top: 40px;
+    }
+
+    .navbar__btn {
+        padding-bottom: 3rem;
+        padding: 1.8rem;
+        margin-top: 40px;
+        z-index: 10000000;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 60px;
+        margin: 0;
+    }
+
+    #mobile-menu {
+        padding-right: 5%;
+        z-index: 10000000;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-last-child(1) {
+        transform: translateY(-8.7px) rotate(-133deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-last-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-last-child(3) {
+        transform: translateY(8.7px) rotate(133deg);
+    }
+}
+
+/* iPad */
+@media screen and (max-width: 768px) {
+
+}
+
+/* iPhone XR */
+@media screen and (max-width: 414px) {
+
+}
+
+/* IPhone XR/11/12 */
+@media screen and (max-width: 391px) {
+    .navbar {
+        width: 390px;
+    }
+
+    #navbar__logo {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+/* IPhone 6/7/8/SE */
+@media screen and (max-width: 376px) {
+
+    body {
+        width: 375px;
+    }
+    .navbar {
+        width: 375px;
+    }
+
+    .navbar__container {
+        width: 100%;
+    }
+
+    #navbar__logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* Navigation Menu End */
+
+/* Hero Section Start */
+
+.hero {
+    background: #131313;
+    padding: 200px 0;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70%;
+    text-align: center;
+    /* padding: 30px; */
+}
+
+.hero__heading {
+    font-size: 6rem;
+    color: #f5f5f5;
+    user-select: none;
+}
+
+#choose {
+    font-size: 4.5rem;
+}
+
+#your {
+    font-size: 5.5rem;
+}
+
+.hero__heading #fruit {
+    background: #ee0979;
+    background: -webkit-linear-gradient(120deg, #ff6a00, #ee0979);
+    background: linear-gradient(120deg, #ff6a00, #ee0979);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero__description {
+    font-size: 3.5rem;
+    background: #da22ff;
+    background: -webkit-linear-gradient(120deg, #9114ff, #da22ff);
+	background: linear-gradient(to right, #8f0eff, #da22ff);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    user-select: none;
+}
+
+#btn__wrapper {
+    margin-top: 40px;
+}
+
+.btn-select {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 15px;
+
+}
+
+/* FRUIT START  */
+
+.fruit {
+    user-select: none;
+    position: absolute;
+    content: '';
+}
+
+.orange {
+    right: 0;
+    font-size: 25rem;
+    transform: translateY(60%) translateX(50px);
+}
+
+.watermelon {
+    left: 0;
+    font-size: 25rem;
+    transform: translateY(45%) translateX(-65px) rotate(-40deg);
+}
+
+.apple {
+    right: 5%;
+    font-size: 17rem;
+    transform: translateY(-40%) translateX(40px) rotate(-35deg);
+    cursor: pointer;
+}
+
+.closed {
+    display: none;
+}
+
+.open {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.banana {
+    left: 5%;
+    font-size: 15rem;
+    transform: translateY(-40%) translateX(20px) rotate(-5deg);
+}
+
+.blueberry {
+    left: 40%;
+    font-size: 10rem;
+    transform: translateY(-95%) translateX(60px) rotate(-15deg);
+}
+
+.pineapple {
+    left: 47%;
+    font-size: 20rem;
+    transform: translateY(65%) translateX(70px) rotate(60deg);
+}
+
+.cherry {
+    left: 70%;
+    font-size: 8rem;
+    transform: translateY(55%) translateX(70px);
+}
+
+.coconut {
+    left: 25%;
+    font-size: 14rem;
+    transform: translateY(120%) translateX(50px);
+}
+
+/* FRUIT END  */
+
+/* Hero Section Media Queries */
+@media screen and (max-width: 1024px) {
+
+    .orange {
+        right: 0;
+        font-size: 12rem;
+        transform: translateY(60%) translateX(0px);
+    }
+    
+    .watermelon {
+        left: 0;
+        font-size: 12rem;
+        transform: translateY(45%) translateX(0px) rotate(-40deg);
+    }
+    
+    .apple {
+        right: 5%;
+        font-size: 8rem;
+        transform: translateY(-110%) translateX(0px) rotate(-35deg);
+        cursor: pointer;
+    }
+    
+    .closed {
+        display: none;
+    }
+    
+    .open {
+        display: none;
+    }
+    
+    .active {
+        display: block;
+    }
+    
+    .banana {
+        left: 5%;
+        font-size: 9rem;
+        transform: translateY(-110%) translateX(30px) rotate(-15deg);
+    }
+    
+    .blueberry {
+        left: 40%;
+        font-size: 8rem;
+        transform: translateY(-105%) translateX(60px) rotate(-15deg);
+    }
+    
+    .pineapple {
+        left: 47%;
+        font-size: 12rem;
+        transform: translateY(140%) translateX(110px) rotate(60deg);
+    }
+    
+    .cherry {
+        display: none;
+    }
+    
+    .coconut {
+        left: 25%;
+        font-size: 9rem;
+        transform: translateY(120%) translateX(50px);
+    }
+    
+}
+
+@media screen and (max-width: 960px) {
+
+    .hero__container {
+        max-width: 960px;
+    }
+
+    .orange {
+        font-size: 10rem;
+    }
+
+    .apple {
+        font-size: 12rem;
+    }
+}
+
+/* iPad */
+@media screen and (max-width: 768px) {
+
+    .hero__container {
+        height: 50vh;
+    }
+
+    #choose {
+        font-size: 3rem;
+    }
+
+    #your {
+        font-size: 4rem;
+    }
+
+    #fruit {
+        font-size: 5rem;
+    }
+
+    .hero__description {
+        font-size: 30px;
+        padding-top: 10px;
+    }
+
+    /* FRUIT START  */
+    .orange {
+        right: 0;
+        font-size: 12rem;
+        transform: translateY(55%) translateX(0px);
+    }
+
+    .watermelon {
+        left: 0;
+        font-size: 10rem;
+        transform: translateY(70%) translateX(50px) rotate(0deg);
+    }
+    
+    .apple {
+        right: 5%;
+        font-size: 8rem;
+        transform: translateY(-110%) translateX(0px) rotate(25deg);
+    }
+
+    .banana {
+        left: 5%;
+        font-size: 10rem;
+        transform:translateY(-90%) translateX(20px) rotate(-15deg);
+    }
+
+    .blueberry {
+        left: 40%;
+        font-size: 8rem;
+        transform: translateY(-115%) translateX(20px) rotate(-15deg);
+    }
+
+    .pineapple {
+        left: 47%;
+        font-size: 12rem;
+        transform: translateY(165%) translateX(50px) rotate(60deg);
+    }
+
+    .cherry {
+        left: 70%;
+        font-size: 6rem;
+        transform: translateY(45%) translateX(40px);
+        display: none;
+    }
+
+    .coconut {
+        left: 25%;
+        font-size: 9.5rem;
+        transform: translateY(165%) translateX(10px);
+    }
+
+    /* FRUIT END  */
+}
+
+@media screen and (max-width: 501px) {
+
+    /* FRUIT START */
+    .orange {
+        font-size: 10rem;
+        transform: translateY(65%) translateX(80px);
+    }
+
+    .watermelon {
+        font-size: 12rem;
+        transform: translateY(85%) translateX(-85px) rotate(-40deg);
+    }
+
+    .apple {
+        right: 5%;
+        font-size: 9rem;
+        transform: translateY(-110%) translateX(30px) rotate(25deg);
+    }
+
+    .banana {
+        left: 5%;
+        font-size: 9rem;
+        transform: translateY(-105%) translateX(-10px) rotate(-15deg);
+    }
+
+    .blueberry {
+        left: 40%;
+        font-size: 8rem;
+        transform: translateY(-165%) translateX(0px) rotate(-15deg);
+    }
+
+    .pineapple {
+        left: 47%;
+        font-size: 12rem;
+        transform: translateY(135%) translateX(80px) rotate(60deg);
+    }
+
+    .coconut {
+        left: 25%;
+        font-size: 7rem;
+        transform: translateY(190%) translateX(20px) rotate(0deg);
+    }
+    /* FRUIT END */
+}
+
+/* iPhone XR */
+/* iPhone XR */
+@media screen and (max-width: 414px) {
+    
+    .orange {
+        font-size: 6rem;
+        transform: translateX(-20%) translateY(200px);
+    }
+
+    .apple {
+        font-size: 5rem;
+        transform:translateY(-190%) translateX(0px) rotate(-15deg);
+    }
+
+    .banana {
+        left: 5%;
+        font-size: 6rem;
+        transform:translateY(-170%) translateX(20px) rotate(-15deg);
+    }
+
+    .blueberry {
+        font-size: 6rem;
+        transform:translateY(-260%) translateX(5px) rotate(-15deg);
+    }
+
+    .coconut {
+        font-size: 5rem;
+        transform: translateX(-80%) translateY(270%);
+    }
+
+    .pineapple {
+        font-size: 9rem;
+        transform: translateX(-10%) translateY(200%) rotate(65deg);
+    }
+
+    .watermelon {
+        display: none;
+    }
+}
+
+/* iPhone XS */
+/* 2436x1125px at 458ppi */
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { }
+
+/* iPhone XS Max */
+/* 2688x1242px at 458ppi */
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 3) { }
+
+
+/* IPhone XR/11/12 */
+@media screen and (max-width: 391px) {
+
+    .fruit {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 376px) {
+
+    .hero {
+        background: #131313;
+        padding: 90px 0;
+    }
+
+    .fruit {
+        display: none;
+    }
+
+    .hero__description {
+        font-size: 30px;
+        padding-top: 5px;
+    }
+
+    #choose {
+        font-size: 2.5rem;
+    }
+
+    #your {
+        font-size: 3.5rem;
+    }
+
+    #fruit {
+        font-size: 4.5rem;
+    }
+}
+
+/* Hero Section End */
+
+/* About Section Start */
+
+.main {
+    background: #161616;
+    padding: 10rem 0;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px 50px;
+    text-align: left;
+}
+
+.main__content {
+    color: #a1a1a6;
+    width: 100%;
+    user-select: none;
+}
+
+.main__content h2 {
+    font-size: 4.3rem;
+    background-color: #fe3b6f;
+	background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	text-transform: lowercase;
+	margin-bottom: 50px;
+    text-align: center;
+}
+
+.main__content h3 {
+    font-size: 3.2rem;
+    background: #da22ff;
+	background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+	background: linear-gradient(to right, #8f0eff, #da22ff);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.main__content p {
+	margin-top: 1.5rem;
+	font-size: 2rem;
+	font-weight: 700;
+    color: #f5f5f5;
+}
+
+/* iPhone XS Max */
+@media only screen and (device-width : 414px) { 
+
+        .main {
+            padding: 6rem 0;
+        }
+
+        .main__container {
+            padding: 10px 20px;
+        }
+
+        .main__container h2 {
+            font-size: 3.4rem;
+        }
+
+        .main__container h3 {
+            font-size: 2.2rem;
+        }
+
+        .main__container p {
+            font-size: 1.8rem;
+        }
+    }
+
+/* iPhone XS */
+@media only screen and (device-width : 375px) and (-webkit-device-pixel-ratio : 3) { 
+
+
+}
+
+@media screen and (max-width: 376px) {
+
+    .main {
+        padding: 5rem 0;
+    }
+    .main__container {
+        padding: 10px 5px;
+    }
+
+    .main__content h2 {
+        font-size: 3.2rem;
+    }
+
+    .main__content h3 {
+        font-size: 2rem;
+        padding: 20px 20px;
+    }
+
+    .main__content p {
+        font-size: 1.2rem;
+        padding: 20px 20px;
+        margin-top: 10px;
+    }
+}
+
+
+/* About Section End */
+
+/* Form Section Start */
+.form__section {
+    /* background: red; */
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.drop-fruit {
+    font-size: 3rem;
+}
+
+#fruit-form {
+    /* border: 2px solid #f5f5f5; */
+    display: block;
+    border-radius: 5px;
+    padding: 50px 40px;
+    color: #f5f5f5;
+    color: #131313;
+    position: relative;
+    top: 0px;
+    background: rgba( 74, 56, 56, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+label {
+    padding: 13px;
+}
+
+.form__inputs {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    font-size: 1.4rem;
+}
+
+#fruit-name, #weight, #inputWeight {
+    border: none;
+    cursor: pointer;
+}
+
+.form__input__PT {
+    padding-top: 30px;
+}
+
+.full__width {
+    padding: 10px;
+    border-radius: 5px;
+    background: #f5f5f5;
+    border: none;
+}
+
+#submit__btn {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 20px 30px;
+    border-radius: 4px;
+    background: transparent;
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    border: 2px solid #f5f5f5;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+
+#submit__btn:hover {
+    border: 2px solid #161616;
+    color: #161616;
+    transform: translateY(-5px);
+    /* transition: all .6s ease;
+    box-shadow: .2px .2px 10px #131313; */
+}
+
+.success, .error {
+    color: white;
+    width: 350px;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.fruit-output {
+    background: #f5f5f5;
+    font-size: 18px;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 5px;
+    border: 1px solid #131313;
+    margin: 70px 0;
+}
+
+.success {
+    background: green;
+}
+
+.error {
+    background: yellow;
+    color: black;
+}
+
+/* Form Section Media Quries */
+
+/* iPhone XR */
+/* 1792x828px at 326ppi */
+@media only screen and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2) {
+
+        #fruit-form {
+            padding: 15px 20px;
+        }
+
+        #submit__btn {
+            padding: 8px 10px;
+            margin-bottom: 10px;
+        }
+
+    }
+
+/* IPhone XR/11/12 */
+@media screen and (max-width: 391px) {
+    
+    .form__section {
+        width: 390px;
+    }
+
+    #fruit-form {
+        padding: 10px 20px;
+    }
+
+}
+
+@media screen and (max-width: 376px) {
+    .form__section {
+        width: 375px;
+    }
+
+    #fruit-form {
+        padding: 10px 20px;
+    }
+
+    .form__inputs {
+        width: 300px;
+    }
+
+    #submit__btn {
+        padding: 8px 10px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Form Section End */
+
+/* Form output overlay */
+
+#form-output-overlay {
+        /* border: 2px solid #f5f5f5; */
+        display: none;
+        border-radius: 5px;
+        padding: 50px 40px;
+        color: #f5f5f5;
+        color: #131313;
+        position: relative;
+        height: 575px;
+        width: 430px;
+        top: 0px;
+        background: rgba( 74, 56, 56, 0.05 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10.5px );
+        -webkit-backdrop-filter: blur( 10.5px );
+        border-radius: 10px;
+        /* border: 1px solid green; */
+}
+
+#refresh__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent;
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    border: 2px solid #f5f5f5;
+    cursor: pointer;
+    transition: all .6s ease;
+    text-decoration: none;
+    transform: translateY(430px);
+}
+
+#refresh__btn:hover {
+    border: 2px solid #161616;
+    color: #161616;
+}
+
+/* LOADING ANIMATION */
+#animation {
+    display: none;
+    /* display: block; */
+}
+
+.loading__animation {
+    width: 80px;
+    height: 80px;
+    margin: 100px auto;
+    margin-top: calc(100vh / 2 - 50px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    transform: translateY(-900px) translateX(-65px);
+    user-select: none;
+}
+
+.fruit__block {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 10px 10px 0;
+    padding: 2px;
+    margin-left: 3px;
+    font-size: 2.5rem;
+}
+
+.fruit__block:nth-child(4n+1) { animation: wave 2s ease-in-out .0s infinite; }
+.fruit__block:nth-child(4n+2) { animation: wave 2s ease-in-out .2s infinite; }
+.fruit__block:nth-child(4n+3) { animation: wave 2s ease-in-out .4s infinite; }
+.fruit__block:nth-child(4n+4) { animation: wave 2s ease-in-out .6s infinite; }
+
+.fruit__block:nth-child(4n+5) { animation: wave 2s ease-in-out .1s infinite; }
+.fruit__block:nth-child(4n+6) { animation: wave 2s ease-in-out .3s infinite; }
+.fruit__block:nth-child(4n+7) { animation: wave 2s ease-in-out .5s infinite; }
+.fruit__block:nth-child(4n+8) { animation: wave 2s ease-in-out .7s infinite; }
+
+.fruit__block:nth-child(4n+9) { animation: wave 2s ease-in-out .2s infinite; }
+.fruit__block:nth-child(4n+10) { animation: wave 2s ease-in-out .4s infinite; }
+.fruit__block:nth-child(4n+11) { animation: wave 2s ease-in-out .6s infinite; }
+.fruit__block:nth-child(4n+12) { animation: wave 2s ease-in-out .7s infinite; }
+
+.fruit__block:nth-child(4n+13) { animation: wave 2s ease-in-out .3s infinite; }
+.fruit__block:nth-child(4n+14) { animation: wave 2s ease-in-out .5s infinite; }
+.fruit__block:nth-child(4n+15) { animation: wave 2s ease-in-out .7s infinite; }
+.fruit__block:nth-child(4n+16) { animation: wave 2s ease-in-out .8s infinite; }
+
+@keyframes wave {
+    0%   { top: 0;     opacity: 1; }
+    50%  { top: 30px;  opacity: .2; }
+    100% { top: 0;     opacity: 1; }
+  }
+
+
+/* Footer Section Start */
+footer {
+    background: #131313;
+    color: #f5f5f7;
+    font-family: 'Sora', sans-serif;
+    padding: 40px 0;
+    text-align: center;
+}
+/* Footer Section End */
+
+

@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "name": "apple",
+      "icon": "🍎",
+      "weight": 0.085
+    },
+    {
+      "name": "banana",
+      "icon": "🍌",
+      "weight": 0.031
+    },
+    {
+      "name": "blueberry",
+      "icon": "🫐",
+      "weight": 0.003
+    },
+    {
+      "name": "coconut",
+      "icon": "🥥",
+      "weight": 1.400
+    },
+    {
+      "name": "grape",
+      "icon": "🍇",
+      "weight": 0.005
+    },
+    {
+      "name": "kiwi",
+      "icon": "🥝",
+      "weight": 0.069
+    },
+    {
+      "name": "lemon",
+      "icon": "🍋",
+      "weight": 0.058
+    },
+    {
+      "name": "mango",
+      "icon": "🥭",
+      "weight": 0.210
+    },
+    {
+      "name": "orange",
+      "icon": "🍊",
+      "weight": 0.120
+    },
+    {
+      "name": "peach",
+      "icon": "🍑",
+      "weight": 0.151
+    },
+    {
+      "name": "pear",
+      "icon": "🍐",
+      "weight": 0.056
+    },
+    {
+      "name": "pineapple",
+      "icon": "🍍",
+      "weight": 0.905
+    },
+    {
+      "name": "strawberry",
+      "icon": "🍓",
+      "weight": 0.007
+    },
+    {
+      "name": "watermelon",
+      "icon": "🍉",
+      "weight": 4.518
+    }
+  ]
+}

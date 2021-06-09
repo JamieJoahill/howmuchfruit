@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="how much fruit?...find out how much you weigh, but in fruit.">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<!-- <link rel="manifest" href="/site.webmanifest"> -->
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>how much fruit?</title>
+</head>
+<body>
+
+<!-- Navigation Bar Start -->
+  <nav class="navbar">
+		<div class="navbar__container">
+			<a href="#" id="navbar__logo">how much fruit?</a>
+		</div>
+		<div class="navbar__toggle" id="mobile-menu">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+		<ul class="navbar__menu">
+			<li class="navbar__item">
+				<a href="#home" class="navbar__links" id="home-page">home</a>
+			</li>
+			<li class="navbar__item">
+				<a href="#about" class="navbar__links" id="home-page">about</a>
+			</li>
+			<!-- <li class="navbar__item">
+				<a href="#services" class="navbar__links" id="services-page">fruit</a>
+			</li> -->
+			<li class="navbar__btn">
+				<a href="#fruit-form" class="button" id="sign-up">convert</a>
+			</li>
+		</ul>
+  </nav>
+<!-- Navigation Bar End -->
+
+<!-- Hero Section Start -->
+	<div class="hero" id="home">
+		<div class="hero__container">
+			<h1 class="hero__heading"><span id="choose">Choose </span><span id="your">your </span><span id="fruit">fruit?</span></h1>
+			<p class="hero__description">Unlimited Possibilites</p>
+			<div class="fruit orange">🍊</div>
+			<div class="fruit watermelon">🍉</div>
+			<div class="fruit apple closed">🍎</div>
+			<div class="fruit apple open active">🍏</div>
+			<div class="fruit banana">🍌</div>
+			<div class="fruit blueberry">🫐</div>
+			<div class="fruit pineapple">🍍</div>
+			<div class="fruit cherry">🍒</div>
+			<div class="fruit coconut">🥥</div>
+			<div id="btn__wrapper">
+				<a href="#fruit-form" class="btn-select">Select</a>
+			</div>
+		</div>
+	</div>
+<!-- Hero Section End -->
+
+<!-- About Section Start -->
+<div class="main" id="about">
+	<div class="main__container">
+		<div class="main__content">
+			<h2>how much fruit?</h2>
+			<h3>find out your weight, but in fruit...</h3>
+			<p>We can convert any weight into the individual fruit equivalent.</p>
+		</div>
+	</div>
+</div>
+<!-- About Section End -->
+
+<!-- Form Section Start -->
+<div class="form__section">
+
+	<form id="fruit-form" autocomplete="off">
+
+		<div class="form__inputs">
+				<label for="fruit-name">Fruit</label>
+				<select id="fruit-name" class="full__width">
+					<option value="">Choose fruit?</option>
+					<option value="apple">🍎 (Apple)</option>
+					<option value="banana">🍌 (Banana)</option>
+					<option value="blueberry">🫐 (Blueberry)</option>
+					<option value="coconut">🥥 (Coconut)</option>
+					<option value="grape">🍇 (Grape)</option>
+					<option value="kiwi">🥝 (Kiwi)</option>
+					<option value="lemon">🍋 (Lemon)</option>
+					<option value="mango">🥭 (Mango)</option>
+					<option value="orange">🍊 (Orange)</option>
+					<option value="peach">🍑 (Peach)</option>
+					<option value="pear">🍐 (Pear)</option>
+					<option value="pineapple">🍍 (Pineapple)</option>
+					<option value="strawberry">🍓 (Strawberry)</option>
+					<option value="watermelon">🍉 (Watermelon)</option>
+				</select>
+		</div>
+
+		<div class="form__inputs form__input__PT">
+			<label for="weight">Mass</label>
+			<select id="weight" class="full__width">
+				<option value="">Choose mass?</option>
+				<option value="kg">Kg</option>
+				<option value="pounds">Pounds</option>
+				<option value="stone">Stone</option>
+			</select>
+		</div>
+
+		<div class="form__inputs form__input__PT">
+			<label for="weight-entered">Enter Weight</label>
+			<input type="number" id="inputWeight" placeholder="Enter your weight" class="full__width">
+		</div>
+
+		<div>
+			<input type="submit" value="how much fruit?" id="submit__btn">
+		</div>
+
+	</form> 
+
+	<div id="form-results"></div>
+
+	<!-- 
+		
+	1. Add Table 
+	2. insert data into each column
+	3. Then create a seperate column for delete
+	
+	
+	
+	-->
+
+
+	<!-- <div id="form-output-overlay">
+		<div id="loading">
+		</div>
+
+		<div>
+			<a href="#" id="refresh__btn">Enter new measurement?</a>
+			<input type="submit" value="Enter new measurement?" id="refesh__btn">
+		</div>
+	</div> -->
+
+</div>
+
+
+<!-- Animation Load Section Start -->
+<div id="animation">
+	<div class="loading__animation">
+		<div class="fruit__block">🍎</div>
+		<div class="fruit__block">🥥</div>
+		<div class="fruit__block">🍍</div>
+		<div class="fruit__block">🍊</div>
+
+		<div class="fruit__block">🫐</div>
+		<div class="fruit__block">🍌</div>
+		<div class="fruit__block">🍒</div>
+		<div class="fruit__block">🥝</div>
+
+		<div class="fruit__block">🥭</div>
+		<div class="fruit__block">🍉</div>
+		<div class="fruit__block">🍐</div>
+		<div class="fruit__block">🍓</div>
+
+		<div class="fruit__block">🍋</div>
+		<div class="fruit__block">🍈</div>
+		<div class="fruit__block">🍇</div>
+		<div class="fruit__block">🍏</div>
+	</div>
+</div>
+<!-- Animation Load Section End -->
+
+<!-- Footer Section Start -->
+<footer>
+	how much fruit? &copy; 2021
+</footer>
+<!-- Footer Section End -->
+
+
+	<script src="app.js"></script>
+</body>
+</html>
